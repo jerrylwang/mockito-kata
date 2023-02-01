@@ -1,9 +1,11 @@
+package part2;
+
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import com.kata.controller.MyController;
 import com.kata.service.MyService;
 
-public class Ex6_MyController {
+public class Ex1_MyController {
 
     @Mock
     private MyService myService;

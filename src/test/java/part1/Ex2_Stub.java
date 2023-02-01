@@ -1,7 +1,11 @@
+package part1;
+
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 
 import java.util.LinkedList;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -34,4 +38,16 @@ public class Ex2_Stub {
 
         // TODO Assert the value
     }
+
+    @Test
+    public void shouldReturnCorrectMockedSize() {
+        LinkedList<String> mockedList = mock(LinkedList.class);
+        mockedList.add("one");
+        verify(mockedList).add("one");
+        assertEquals(0, mockedList.size());
+
+        Mockito.when(mockedList.size()).thenReturn(100);
+        assertEquals(100, mockedList.size());
+    }
+
 }

@@ -1,3 +1,5 @@
+package part1;
+
 import org.junit.jupiter.api.Test;
 
 import java.util.LinkedList;
@@ -11,8 +13,7 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
-public class Ex4_Do_Family {
-    public static final String ANSI_RED_BACKGROUND = "\u001B[41m";
+public class Ex6_Do_Family {
 
     @Test
     void shouldThrownException_whenClearList() {
@@ -23,7 +24,7 @@ public class Ex4_Do_Family {
         //following throws RuntimeException:
         mockedList.clear();
 
-        //TODO How do we assert an exception is/not thrown when a method is called
+        // TODO How do we assert an exception is/not thrown when a method is called
     }
 
     @Test
@@ -39,7 +40,7 @@ public class Ex4_Do_Family {
     }
 
     @Test
-    public void shouldDoAnswer_whenAddList() {
+    void shouldDoAnswer_whenAddList() {
         LinkedList<String> myList = mock(LinkedList.class);
 
         doAnswer(invocation -> {

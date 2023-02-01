@@ -1,3 +1,5 @@
+package part1;
+
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -6,7 +8,7 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
-public class Ex1a_Verify {
+public class Ex4a_Verify {
 
     @Test
     void shouldAddOneItemToTheList() {
