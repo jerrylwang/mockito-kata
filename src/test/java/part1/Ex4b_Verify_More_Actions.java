@@ -50,7 +50,6 @@ public class Ex4b_Verify_More_Actions {
         verify(mockList, never()).add("THIRD TIME LUCKY");
     }
 
-
     @Test
     public void shouldPerformDatabaseCheck(@Mock Database database) {
         // create and configure mock

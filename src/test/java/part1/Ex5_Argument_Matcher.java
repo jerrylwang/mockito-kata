@@ -11,6 +11,7 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 public class Ex5_Argument_Matcher {
+
     public static final String ANSI_RED_BACKGROUND = "\u001B[41m";
 
     @Test
