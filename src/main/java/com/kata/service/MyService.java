@@ -12,8 +12,8 @@ public class MyService {
 
     private final HttpClient httpClient;
 
-    public MyService() {
-        this.httpClient = HttpClient.newHttpClient();
+    public MyService(HttpClient httpClient) {
+        this.httpClient = httpClient;
     }
 
     public HttpResponse<String> send(HttpRequest request) throws IOException, InterruptedException {

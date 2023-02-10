@@ -15,18 +15,19 @@ import java.net.http.HttpResponse;
 public class MyController {
 
     private final MyService myService;
+    private final HttpRequest httpRequest;
 
-    public MyController(MyService myService) {
+    public MyController(MyService myService, HttpRequest httpRequest) {
         this.myService = myService;
+        this.httpRequest = httpRequest;
     }
 
     @GetMapping("")
     public ResponseEntity<String> callService() {
-        HttpRequest request = HttpRequest.newBuilder().build();
         HttpResponse<String> response;
 
         try {
-            response = myService.send(request);
+            response = myService.send(httpRequest);
         } catch (IOException | InterruptedException e) {
             throw new RuntimeException(e);
         }

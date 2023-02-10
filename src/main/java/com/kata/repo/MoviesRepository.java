@@ -12,4 +12,6 @@ import java.util.stream.Stream;
 public interface MoviesRepository {
 
     Stream<Movie> getAll() throws IOException;
+
+
 }
